@@ -1,0 +1,23 @@
+{
+  "name": "babel-plugin-react-chaos",
+  "version": "0.0.1",
+  "description": "Babel plugin for react-chaos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SugarTurboS/babel-plugin-react-chaos.git"
+  },
+  "keywords": [
+    "react-chaos",
+    "babel"
+  ],
+  "author": "ForeverPx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SugarTurboS/babel-plugin-react-chaos/issues"
+  },
+  "homepage": "https://github.com/SugarTurboS/babel-plugin-react-chaos#readme"
+}
