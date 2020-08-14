@@ -6,11 +6,15 @@
 
 > Babel plugin for react-chaos
 
+Auto wrap your react components with [react-chaos](https://github.com/jchiatt/react-chaos)
+
 ### 🏠 [Homepage](https://github.com/SugarTurboS/babel-plugin-react-chaos#readme)
 
 ## Install
 
 ```sh
+npm install react-chaos
+
 npm install babel-plugin-react-chaos
 ```
 
@@ -25,9 +29,37 @@ plugins: [
 ]
 ```
 
-## Finally
+## Principle
 
-None
+Your source react component
+
+```js
+import React from 'react'
+
+function Hello(){
+    return (
+        <div>Hello</div>
+    )
+}
+
+export default Hello;
+```
+
+transform to
+
+```js
+import React from 'react'
+import withChaos from 'react-chaos'
+
+function Hello(){
+    return (
+        <div>Hello</div>
+    )
+}
+
+export default withChaos(Hello, |chaosLevel|);
+```
+
 
 ## Author
 
