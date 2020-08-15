@@ -4,7 +4,7 @@ module.exports = function(babel){
         visitor: {
             ImportDeclaration(path, state){
                 let chaosLevel = state.opts.chaosLevel ? state.opts.chaosLevel : 5;
-                const updateParamNameVisitor = {
+                const exDefaultVisitor = {
                     ExportDefaultDeclaration(path) {
                         var dName = path.node.declaration.name;
                         if(dName){
@@ -22,7 +22,7 @@ module.exports = function(babel){
 
                     const newPath = path.findParent((path) => path.isProgram());
                     newPath.node.body.splice(2,0,imports);
-                    newPath.traverse(updateParamNameVisitor)
+                    newPath.traverse(exDefaultVisitor)
                 }
             }
         }
